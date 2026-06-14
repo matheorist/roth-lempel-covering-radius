@@ -198,7 +198,7 @@ The only four-column sets that can become dependent are
 factor times \(\delta-(a+b+c)\).  This proves the final assertion.
 \end{proof}
 
-\begin{proposition}[Explicit duality]\label{prop:duality}
+\begin{proposition}[Parity-check duality]\label{prop:duality}
 Put \(\sigma=\sum_{a\in S}a\), \(\theta=\sigma-\delta\), and
 \[
   \lambda_i=\left(\prod_{j\ne i}(a_i-a_j)\right)^{-1}.
@@ -237,7 +237,7 @@ the last two columns produces the eight columns
 which are precisely the generator columns of \(\RL_{4,\theta}(S)\).
 \end{proof}
 
-\begin{corollary}[Dual compatibility of the MDS criterion]
+\begin{corollary}[Dual invariance of the MDS criterion]
 \label{cor:duality-mds}
 Let \(r_S(\delta)\) denote the number of three-subsets \(T\subset S\) with
 \(\sum_{a\in T}a=\delta\).  Then \(C\) is MDS if and only if
@@ -255,7 +255,7 @@ maps a three-subset of sum \(\delta\) bijectively to a three-subset of sum
 Proposition~\ref{prop:duality}.
 \end{proof}
 
-\begin{proposition}[The second syndrome shell]\label{prop:second-shell}
+\begin{proposition}[Second syndrome shell]\label{prop:second-shell}
 For \(C=\RL_{4,\delta}(S)\), let \(r_S(\delta)\) be as in
 Corollary~\ref{cor:duality-mds}.  The number \(m_2(C)\) of projective
 syndrome points at distance exactly \(2\) satisfies
@@ -328,7 +328,7 @@ cover \(\PG(3,q)\).  The final assertion is the standard redundancy bound
 \cite{Cohen1997,Huffman2003}.
 \end{proof}
 
-\begin{proposition}[Projection centers]\label{prop:projection}
+\begin{proposition}[Uncovered syndromes as projection centers]\label{prop:projection}
 With the notation of Proposition~\ref{prop:criterion}, a projective point
 \(P\in\PG(3,q)\) is not covered by the \(56\) triple spans if and only if
 projection from \(P\) maps \(H_1,\ldots,H_8\) to eight points of a plane with
@@ -350,7 +350,7 @@ Roth--Lempel parity-check configuration.  The explicit centers constructed
 below therefore give a finite-geometric witness for the existence of such
 projected arcs in the non-exceptional range.
 
-\begin{proposition}[Explicit uncovered-syndrome criterion]
+\begin{proposition}[Fifty-six-factor uncovered-syndrome criterion]
 \label{prop:explicit-product}
 Let \(C=\RL_{4,\delta}(S)\), let
 \(\theta=\sum_{a\in S}a-\delta\), and write a projective syndrome relative
@@ -465,7 +465,7 @@ Proposition~\ref{prop:explicit-product} and
 Proposition~\ref{prop:deep-census}.
 \end{proof}
 
-\begin{proposition}[Affine covariance of the explicit centers]
+\begin{proposition}[Affine covariance of twisted-cubic centers]
 \label{prop:affine-covariance}
 Let \(S'=uS+v\) and \(\delta'=u\delta+3v\), where
 \(u\in\F_q^\ast\) and \(v\in\F_q\).  If
@@ -505,7 +505,7 @@ certificates below, but their elementary count does not improve the
 uniform threshold in Proposition~\ref{prop:twisted-centers}.
 \end{remark}
 
-\begin{theorem}[Explicit syndrome distance stratification]
+\begin{theorem}[Syndrome distance stratification]
 \label{thm:distance-stratification}
 Continue with the notation of Proposition~\ref{prop:explicit-product}, and
 let \(P\ne0\) be a syndrome point.  Write \(\mathcal L_2(P)\) for the
@@ -607,7 +607,7 @@ Solving for \(m_3(C)\) gives the stated vector.  If \(\rho(C)=3\), then
 the number of deep-hole words.
 \end{proof}
 
-\begin{corollary}[An infinite large-field class]\label{cor:large-q}
+\begin{corollary}[Large-field covering-radius bound]\label{cor:large-q}
 Let \(C\) be any \([8,4]_q\) linear code.  If \(q\ge 56\), then
 \(\rho(C)=4\).  In particular, for every prime power \(q\ge 56\), every
 Roth--Lempel code \(\RL_{4,\delta}(S)\) with \(|S|=6\) has covering radius
@@ -628,7 +628,7 @@ code has redundancy \(4\), the redundancy bound gives \(\rho(C)\le 4\).
 Therefore \(\rho(C)=4\).
 \end{proof}
 
-\begin{proposition}[MDS and NMDS refinements]\label{prop:large-q-refined}
+\begin{proposition}[MDS and NMDS large-field refinements]\label{prop:large-q-refined}
 Let \(C\) be an \([8,4]_q\) code.  If \(C\) is MDS and \(q\ge54\), then
 \(\rho(C)=4\).  If \(C\) is NMDS and \(q\ge53\), then
 \(\rho(C)=4\).
@@ -753,7 +753,7 @@ remaining prime power at least \(16\).  The final assertion is the first
 five rows of Theorem~\ref{thm:complete}.
 \end{proof}
 
-\begin{corollary}[Explicit deep holes for all \(q\ge16\)]
+\begin{corollary}[Deep-hole criterion for all \(q\ge16\)]
 \label{cor:explicit-deepholes}
 Let \(q\ge16\), let \(C=\RL_{4,\delta}(S)\) with \(|S|=6\), and let \(u\)
 be a word with nonzero syndrome \(P=Hu^{\mathsf T}\), using the explicit
