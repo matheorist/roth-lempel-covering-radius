@@ -958,28 +958,10 @@ ranges from \(28\) to \(117\) across the \(777\) classes.  For \(q=19,23,29,31,3
 the original computation records an explicit first uncovered syndrome point
 for every affine class.
 
-The following earlier certificate computation searches first in the
-structured projective slice \(P=[1,u,v,v]\) and invokes full-space search only
-when that slice contains no hole.  Table~\ref{tab:one-slice-certificates}
-records the result; its final column is zero in every row.
-\begin{center}
-\captionof{table}{One-slice certificate search for \(q=17,\ldots,41\).}
-\label{tab:one-slice-certificates}
-\(
-\begin{array}{c|r|r|r|r}
-q & \hbox{affine classes} & P=[1,u,v,v]\hbox{ cert.}
-  & \hbox{fallback cert.} & \hbox{uncertified}\\
-\hline
-17 & 777    & 695    & 82   & 0\\
-19 & 1514   & 1415   & 99   & 0\\
-23 & 4596   & 4396   & 200  & 0\\
-29 & 16978  & 16164  & 814  & 0\\
-31 & 24562  & 23434  & 1128 & 0\\
-37 & 64604  & 61632  & 2972 & 0\\
-41 & 112439 & 107526 & 4913 & 0
-\end{array}
-\)
-\end{center}
+An earlier one-slice certificate computation, searching first in the
+structured projective slice \(P=[1,u,v,v]\), is retained in the
+reproducibility manifest as a historical cross-check.  The stronger
+two-slice scan below is the compact form reported in the article.
 
 A strengthened two-slice scan first searches \(P=[1,u,v,v]\), then
 \(P=[1,u,v,u]\), and invokes full-space search only if both slices fail.
@@ -1294,12 +1276,16 @@ Boundary certification &
 \(16,17,19\) &
 All residual cases after the theoretical test; thirty explicit
 radius-four witnesses.\\
+Boundary class-level cross-checks &
+\(16,17,19\) &
+Complete affine-representative scans, including the \(q=16\) two-slice
+scan and explicit uncovered syndromes for \(q=17,19\).\\
 Formula validation &
 \(7,\ldots,19\) &
 Product criterion, shell formula, and affine-covariance checks.\\
 Independent cross-checks &
-\(\begin{gathered}16,23,25,27,\\
-29,31,32,37,41,\\
+\(\begin{gathered}23,25,27,29,\\
+31,32,37,41,\\
 43,47,49,53\end{gathered}\) &
 Additional exact scans consistent with the theorem; not proof inputs.\\
 \bottomrule
