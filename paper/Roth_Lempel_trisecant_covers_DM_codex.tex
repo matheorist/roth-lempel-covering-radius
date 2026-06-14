@@ -123,10 +123,11 @@ These conclusions concern the existence and explicit description of deep
 holes in a classical non-GRS MDS/NMDS family; they do not require introducing
 a new code definition.  They nevertheless provide an infinite supply of
 fully certified \([8,4]_q\) Roth--Lempel seed codes with maximal covering
-radius for deep-hole-based extension constructions.  The finite part of the
-proof uses exact Magma enumeration, not randomized search.  The proof-critical
-computations, certificates, and independent cross-checks are separated and
-documented in Section~\ref{sec:reproducibility}.
+radius and explicitly decidable deep-hole syndromes for deep-hole-based
+extension constructions; see Corollary~\ref{cor:seed-codes}.  The finite
+part of the proof uses exact Magma enumeration, not randomized search.  The
+proof-critical computations, certificates, and independent cross-checks are
+separated and documented in Section~\ref{sec:reproducibility}.
 
 \section{Roth--Lempel codes}
 
@@ -769,6 +770,22 @@ Proposition~\ref{prop:explicit-product} characterizes exactly those
 syndrome cosets whose distance is \(4\).
 \end{proof}
 
+\begin{corollary}[Certified deep-hole seed codes]\label{cor:seed-codes}
+For every prime power \(q\ge16\), the length-eight Roth--Lempel family
+\(\RL_{4,\delta}(S)\), \(|S|=6\), supplies explicit MDS or NMDS
+\([8,4]_q\) seed codes with maximal covering radius.  More precisely, for
+each seed the deep-hole syndrome cosets are exactly the nonzero syndromes
+\(P\) satisfying \(\Phi_{S,\delta}(P)\ne0\).  Therefore any
+deep-hole-based extension framework whose hypotheses require an explicit
+deep hole in such a seed may choose \(P\) by this nonvanishing test.
+\end{corollary}
+
+\begin{proof}
+This is an immediate restatement of Theorem~\ref{thm:threshold} and
+Corollary~\ref{cor:explicit-deepholes}.  The MDS/NMDS alternative is
+Proposition~\ref{prop:exhaustion}.
+\end{proof}
+
 The three smallest fields have particularly compact exceptional
 descriptions.  Here \(\F_8=\F_2(w)\), \(w^3+w+1=0\), and
 \(\F_9=\F_3(w)\), \(w^2+2w+2=0\); all displayed classes have \(\rho=3\).
@@ -1072,6 +1089,8 @@ syndrome stratification and shell formulas.  Thus the paper gives a complete
 answer for this \([8,4]\) Roth--Lempel family and provides certified seed
 codes for possible deep-hole-based extension constructions; the broader
 problem for arbitrary Roth--Lempel parameters \((k,n)\) remains separate.
+Extending the same syndrome-geometric method beyond length eight is a natural
+next problem.
 
 \section{Reproducibility}\label{sec:reproducibility}
 
