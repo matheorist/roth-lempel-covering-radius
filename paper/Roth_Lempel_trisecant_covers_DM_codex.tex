@@ -824,31 +824,26 @@ given in Table~\ref{tab:r-spectrum}.
 \captionof{table}{Low-field radius spectrum by the multiplicity
 \(r_S(\delta)\).}
 \label{tab:r-spectrum}
-\(
-\begin{array}{c|c|r|r}
-q&r_S(\delta)&\rho&\hbox{affine classes}\\ \hline
-7&2&3&1\\
-7&3&3&1\\ \hline
-8&2&3&3\\
-8&4&4&1\\ \hline
-9&0&3&1\\
-9&2&3&8\\
-9&3&3&5\\ \hline
-11&0&3&1\\
-11&0&4&1\\
-11&1&3&14\\
-11&2&3&16\\
-11&2&4&9\\
-11&3&3&1\\
-11&3&4&6\\ \hline
-13&0&3&3\\
-13&0&4&7\\
-13&1&3&4\\
-13&1&4&56\\
-13&2&4&64\\
-13&3&4&12
-\end{array}
-\)
+\small
+\begin{tabular}{c c r r@{\qquad}c c r r}
+\toprule
+\(q\)&\(r_S(\delta)\)&\(\rho\)&classes&
+\(q\)&\(r_S(\delta)\)&\(\rho\)&classes\\
+\midrule
+7&2&3&1  & 11&0&4&1\\
+7&3&3&1  & 11&1&3&14\\
+8&2&3&3  & 11&2&3&16\\
+8&4&4&1  & 11&2&4&9\\
+9&0&3&1  & 11&3&3&1\\
+9&2&3&8  & 11&3&4&6\\
+9&3&3&5  & 13&0&3&3\\
+11&0&3&1 & 13&0&4&7\\
+          & & & & 13&1&3&4\\
+          & & & & 13&1&4&56\\
+          & & & & 13&2&4&64\\
+          & & & & 13&3&4&12\\
+\bottomrule
+\end{tabular}
 \end{center}
 Thus \(r_S(\delta)=0\) distinguishes MDS from NMDS exactly, but neither
 the code type nor the number of dependent four-column sets determines the
@@ -866,24 +861,19 @@ the complete spectrum for the classes with \(\rho=3\); ``DH cosets'' denotes
 \captionof{table}{Deep-hole coset spectrum for the radius-three classes.}
 \label{tab:dh-coset-spectrum}
 \small
-\(
-\begin{array}{c|c|r|r|r}
-q & \hbox{type} & \hbox{DH cosets} & \hbox{affine classes} & \hbox{raw cases}\\
-\hline
-7  & \mathrm{NMDS} & 1380  & 1  & 7\\
-7  & \mathrm{NMDS} & 1398  & 1  & 42\\
-8  & \mathrm{NMDS} & 2709  & 3  & 168\\
-9  & \mathrm{MDS}  & 4704  & 1  & 24\\
-9  & \mathrm{NMDS} & 4752  & 8  & 516\\
-9  & \mathrm{NMDS} & 4776  & 5  & 216\\
-11 & \mathrm{MDS}  & 11760 & 1  & 55\\
-11 & \mathrm{NMDS} & 11790 & 14 & 1540\\
-11 & \mathrm{NMDS} & 11820 & 16 & 1705\\
-11 & \mathrm{NMDS} & 11850 & 1  & 110\\
-13 & \mathrm{MDS}  & 24432 & 3  & 312\\
-13 & \mathrm{NMDS} & 24468 & 4  & 624
-\end{array}
-\)
+\begin{tabular}{c c r r r@{\qquad}c c r r r}
+\toprule
+\(q\)&type&DH cosets&classes&raw&
+\(q\)&type&DH cosets&classes&raw\\
+\midrule
+7  & NMDS & 1380  & 1  & 7    & 11 & MDS  & 11760 & 1  & 55\\
+7  & NMDS & 1398  & 1  & 42   & 11 & NMDS & 11790 & 14 & 1540\\
+8  & NMDS & 2709  & 3  & 168  & 11 & NMDS & 11820 & 16 & 1705\\
+9  & MDS  & 4704  & 1  & 24   & 11 & NMDS & 11850 & 1  & 110\\
+9  & NMDS & 4752  & 8  & 516  & 13 & MDS  & 24432 & 3  & 312\\
+9  & NMDS & 4776  & 5  & 216  & 13 & NMDS & 24468 & 4  & 624\\
+\bottomrule
+\end{tabular}
 \end{center}
 For the radius-four classes, the hole distributions below constitute an
 equally complete deep-hole census through the formula
@@ -899,33 +889,31 @@ in Table~\ref{tab:q11-q13-hole-distribution}.
 \begin{center}
 \captionof{table}{Hole distribution for \(q=11\) and \(q=13\).}
 \label{tab:q11-q13-hole-distribution}
-\(
-\begin{array}{c|c|c|r|r}
-q & \hbox{type} & \hbox{holes} & \hbox{affine classes} & \hbox{raw cases}\\
-\hline
-11 & \mathrm{MDS}  & 0 & 1  & 55\\
-11 & \mathrm{NMDS} & 0 & 31 & 3355\\
-11 & \mathrm{MDS}  & 1 & 1  & 22\\
-11 & \mathrm{NMDS} & 1 & 13 & 1430\\
-11 & \mathrm{NMDS} & 2 & 2  & 220\\
-\hline
-13 & \mathrm{MDS}  & 0  & 3  & 312\\
-13 & \mathrm{NMDS} & 0  & 4  & 624\\
-13 & \mathrm{MDS}  & 1  & 4  & 624\\
-13 & \mathrm{MDS}  & 2  & 1  & 156\\
-13 & \mathrm{MDS}  & 3  & 2  & 312\\
-13 & \mathrm{NMDS} & 1  & 11 & 1716\\
-13 & \mathrm{NMDS} & 2  & 34 & 5304\\
-13 & \mathrm{NMDS} & 3  & 22 & 3328\\
-13 & \mathrm{NMDS} & 4  & 27 & 4082\\
-13 & \mathrm{NMDS} & 5  & 15 & 2340\\
-13 & \mathrm{NMDS} & 6  & 10 & 1560\\
-13 & \mathrm{NMDS} & 7  & 8  & 1248\\
-13 & \mathrm{NMDS} & 8  & 2  & 234\\
-13 & \mathrm{NMDS} & 9  & 2  & 312\\
-13 & \mathrm{NMDS} & 12 & 1  & 156
-\end{array}
-\)
+\scriptsize
+\begin{tabular}{c c r r@{\qquad}c c r r}
+\toprule
+\multicolumn{4}{c}{\(q=11\)}&
+\multicolumn{4}{c}{\(q=13\)}\\
+\cmidrule(r{1.2em}){1-4}\cmidrule(l){5-8}
+type&holes&classes&raw&type&holes&classes&raw\\
+\midrule
+MDS  &0&1 &55   & MDS  &0 &3 &312\\
+NMDS &0&31&3355 & NMDS &0 &4 &624\\
+MDS  &1&1 &22   & MDS  &1 &4 &624\\
+NMDS &1&13&1430 & MDS  &2 &1 &156\\
+NMDS &2&2 &220  & MDS  &3 &2 &312\\
+     & &  &     & NMDS &1 &11&1716\\
+     & &  &     & NMDS &2 &34&5304\\
+     & &  &     & NMDS &3 &22&3328\\
+     & &  &     & NMDS &4 &27&4082\\
+     & &  &     & NMDS &5 &15&2340\\
+     & &  &     & NMDS &6 &10&1560\\
+     & &  &     & NMDS &7 &8 &1248\\
+     & &  &     & NMDS &8 &2 &234\\
+     & &  &     & NMDS &9 &2 &312\\
+     & &  &     & NMDS &12&1 &156\\
+\bottomrule
+\end{tabular}
 \end{center}
 Here holes means the number of projective syndrome points not covered by the
 \(56\) trisecant planes.  Thus the rows with holes \(0\) are precisely the
@@ -937,24 +925,19 @@ the classification by MDS/NMDS type is purely negative.
 \captionof{table}{MDS/NMDS classification for fields with no radius-three
 classes.}
 \label{tab:negative-mds-nmds}
-\(
-\begin{array}{c|c|c|r|r}
-q & \hbox{type} & \rho & \hbox{affine classes} & \hbox{raw cases}\\
-\hline
-17 & \mathrm{MDS}  & 4 & 139 & 37128\\
-17 & \mathrm{NMDS} & 4 & 638 & 173264\\
-19 & \mathrm{MDS}  & 4 & 350 & 119434\\
-19 & \mathrm{NMDS} & 4 & 1164 & 396074\\
-23 & \mathrm{MDS}  & 4 & 1488 & 752268\\
-23 & \mathrm{NMDS} & 4 & 3108 & 1569513\\
-29 & \mathrm{MDS}  & 4 & 7326 & 5947514\\
-29 & \mathrm{NMDS} & 4 & 9652 & 7828066\\
-31 & \mathrm{MDS}  & 4 & 11316 & 10518771\\
-31 & \mathrm{NMDS} & 4 & 13246 & 12305940\\
-37 & \mathrm{MDS}  & 4 & 34472 & 45890064\\
-37 & \mathrm{NMDS} & 4 & 30132 & 40126944
-\end{array}
-\)
+\small
+\begin{tabular}{c c r r r r}
+\toprule
+\(q\)&\(\rho\)&MDS classes&MDS raw&NMDS classes&NMDS raw\\
+\midrule
+17&4&139   &37128    &638   &173264\\
+19&4&350   &119434   &1164  &396074\\
+23&4&1488  &752268   &3108  &1569513\\
+29&4&7326  &5947514  &9652  &7828066\\
+31&4&11316 &10518771 &13246 &12305940\\
+37&4&34472 &45890064 &30132 &40126944\\
+\bottomrule
+\end{tabular}
 \end{center}
 No affine class is hole-free for \(q=17,19,23,29,31,37\).  For \(q=17\), where full
 hole counts were recorded, the number of uncovered projective syndrome points
