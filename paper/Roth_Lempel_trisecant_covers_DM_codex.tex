@@ -50,8 +50,9 @@ parity-check columns must cover \(\PG(3,q)\).  An uncovered point is both a
 deep-hole syndrome and a projection center producing a plane \(8\)-arc.
 An explicit twisted-cubic construction proves the threshold theoretically
 for every \(q\ge23\), and for every NMDS member already when \(q\ge19\);
-only thirty affine representatives over \(q=16,17,19\) require explicit
-finite certificates.  We further give a \(56\)-factor polynomial whose
+within this theoretical proof, only thirty residual affine representatives
+over \(q=16,17,19\) require explicit finite certificates.  We further give
+a \(56\)-factor polynomial whose
 nonvanishing characterizes all deep-hole syndromes when \(q\ge16\), an
 explicit distance stratification in every admissible field, and closed
 formulas for all projective syndrome shells, including
@@ -763,6 +764,12 @@ remaining prime power at least \(16\).  The final assertion is the first
 five rows of Theorem~\ref{thm:complete}.
 \end{proof}
 
+Thus the boundary fields \(q=16,17,19\) are covered in two independent
+ways: the proof of Theorem~\ref{thm:threshold} uses the twisted-cubic
+reduction plus thirty explicit residual certificates, while the complete
+enumeration in Theorem~\ref{thm:complete} supplies an independent
+class-by-class computational verification.
+
 \begin{corollary}[Deep-hole criterion for all \(q\ge16\)]
 \label{cor:explicit-deepholes}
 Let \(q\ge16\), let \(C=\RL_{4,\delta}(S)\) with \(|S|=6\), and let \(u\)
@@ -1261,7 +1268,10 @@ in Remark~\ref{rem:boundary-families}; the certificates themselves are
 listed in the companion supplement
 \path{Roth_Lempel_boundary_certificates_codex_supplement.tex}.
 For every \(q\geq 23\), Theorem~\ref{thm:threshold} is theoretical and does
-not depend on an exhaustive machine scan.
+not depend on an exhaustive machine scan.  The complete-classification scans
+reported in Theorem~\ref{thm:complete}, including the \(q=16\) two-slice
+scan, provide independent class-by-class checks of these conclusions rather
+than additional hypotheses for the threshold proof.
 
 \subsection*{Verification summary}
 Table~\ref{tab:verification-summary} summarizes the verification tasks used
@@ -1288,8 +1298,8 @@ Formula validation &
 \(7,\ldots,19\) &
 Product criterion, shell formula, and affine-covariance checks.\\
 Independent cross-checks &
-\(\begin{gathered}23,25,27,29,\\
-31,32,37,41,\\
+\(\begin{gathered}16,23,25,27,\\
+29,31,32,37,41,\\
 43,47,49,53\end{gathered}\) &
 Additional exact scans consistent with the theorem; not proof inputs.\\
 \bottomrule
@@ -1297,7 +1307,7 @@ Additional exact scans consistent with the theorem; not proof inputs.\\
 \end{center}
 
 The accompanying program-and-log manifest,
-\path{Roth_Lempel_reproducibility_manifest_codex_20260526.md}, records the
+\path{Roth_Lempel_reproducibility_manifest_codex_20260615.md}, records the
 Magma files, exact output logs, extracted tables, and the logical role of
 each computation.  This keeps the article-level argument separate from
 archival computational material while providing a direct audit trail for
