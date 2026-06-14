@@ -1058,6 +1058,21 @@ no stronger uniform threshold theorem is asserted for them.
 The complete thirty-row list is supplied in
 \path{Roth_Lempel_boundary_certificates_codex_supplement.tex}.
 
+\section{Conclusion}
+
+For the length-eight Roth--Lempel family
+\(\RL_{4,\delta}(S)\), \(|S|=6\), the covering-radius problem is completely
+settled.  Every member is MDS or NMDS, the exact threshold is
+\(\rho(C)=4\) for all prime powers \(q\ge16\), and the only radius-three
+classes occur over \(q=7,8,9,11,13\), where they are all explicitly
+classified up to affine equivalence.  Moreover, the deep-hole syndromes are
+described by an explicit \(56\)-factor condition in the maximal-radius
+range, while the exceptional low-field cases are covered by the explicit
+syndrome stratification and shell formulas.  Thus the paper gives a complete
+answer for this \([8,4]\) Roth--Lempel family and provides certified seed
+codes for possible deep-hole-based extension constructions; the broader
+problem for arbitrary Roth--Lempel parameters \((k,n)\) remains separate.
+
 \section{Reproducibility}\label{sec:reproducibility}
 
 All finite computations reported in this paper were performed in Magma
@@ -1120,10 +1135,14 @@ Magma files, exact output logs, extracted tables, and the logical role of
 each computation.  This keeps the article-level argument separate from
 archival computational material while providing a direct audit trail for
 every finite assertion used above.
-For anonymous review, the complete Magma package and logs are supplied as
-electronic supplementary material; the final version will place the code,
-logs, and certificate files in the public repository
+
+\subsection*{Data and code availability}
+The Magma programs, output logs, boundary certificates, extracted data
+tables, manuscript source, and reproducibility manifest are publicly
+available at
+\begin{center}
 \url{https://github.com/matheorist/roth-lempel-covering-radius}.
+\end{center}
 
 \section{Complete \texorpdfstring{\(q=11\)}{q=11} affine classification}
 
@@ -1221,7 +1240,8 @@ For \(q=19,23,29,31,37\), each listed class includes an explicit first-hole
 certificate.  The full class-level results for \(q=7,8,9\) are contained in
 the exact small-prime-power log.  Exact certificate logs for the later fields
 \(q=41,43,47,49,53\) and the extension fields \(q=16,25,27,32\) are listed
-in Section~\ref{sec:reproducibility} and are supplied electronically.
+in Section~\ref{sec:reproducibility} and are available in the public
+repository above.
 
 \begin{thebibliography}{99}
 
