@@ -1,4 +1,4 @@
-﻿\documentclass[11pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -409,15 +409,15 @@ from Proposition~\ref{prop:criterion}.
 Let \(C=\RL_{4,\delta}(S)\), put
 \(\theta=\sum_{a\in S}a-\delta\), and set
 \[
- {\cal B}_{S,\delta}
+ \mathcal{B}_{S,\delta}
  =S\cup\{\theta-a-b:\{a,b\}\subset S\}.
 \]
 For \(x\in\F_q\), the point \(V(x)=(1,x,x^2,x^3)\) has coset distance
-\(4\) if and only if \(x\notin{\cal B}_{S,\delta}\).  Let \(m_4(C)\)
+\(4\) if and only if \(x\notin\mathcal{B}_{S,\delta}\).  Let \(m_4(C)\)
 denote the number of projective syndromes at distance \(4\), and let
 \(r=r_S(\delta)\).  Then
 \[
-  \lvert{\cal B}_{S,\delta}\rvert\le21-3r,\qquad
+  \lvert\mathcal{B}_{S,\delta}\rvert\le21-3r,\qquad
   m_4(C)\ge q-21+3r.
 \]
 Consequently:
@@ -449,7 +449,7 @@ D_{abc}(V(x))&=(x-a)(x-b)(x-c).
 \end{aligned}
 \]
 Hence \(\Phi_{S,\delta}(V(x))\ne0\) precisely when
-\(x\notin{\cal B}_{S,\delta}\).
+\(x\notin\mathcal{B}_{S,\delta}\).
 
 By Corollary~\ref{cor:duality-mds}, exactly \(r\) three-subsets of \(S\)
 have sum \(\theta\).  A pair \(\{a,b\}\subset S\) satisfies
@@ -459,12 +459,13 @@ unique third member.  Thus exactly \(3r\) of the \(15\) indexed pair values
 already belong to \(S\).  Any additional coincidence only decreases the
 forbidden set, giving
 \[
- \lvert{\cal B}_{S,\delta}\rvert\le 6+(15-3r)=21-3r.
+ \lvert\mathcal{B}_{S,\delta}\rvert\le 6+(15-3r)=21-3r.
 \]
 There are therefore at least \(q-21+3r\) twisted-cubic centers whenever
-this number is positive.  The assertions follow from
-Proposition~\ref{prop:explicit-product} and
-Proposition~\ref{prop:deep-census}.
+this number is positive.  The projective-syndrome assertions follow from
+Proposition~\ref{prop:explicit-product}.  Each projective syndrome coset
+contains \(q^4(q-1)\) words, giving the stated lower bound for deep-hole
+words.
 \end{proof}
 
 \begin{proposition}[Affine covariance of twisted-cubic centers]
@@ -475,7 +476,7 @@ Let \(S'=uS+v\) and \(\delta'=u\delta+3v\), where
 \(\theta'=\sum_{a'\in S'}a'-\delta'\), then
 \[
  \theta'=u\theta+3v,\qquad
- {\cal B}_{S',\delta'}=u{\cal B}_{S,\delta}+v.
+ \mathcal{B}_{S',\delta'}=u\mathcal{B}_{S,\delta}+v.
 \]
 In particular, the number of twisted-cubic centers supplied by
 Proposition~\ref{prop:twisted-centers} is invariant under the affine
@@ -491,7 +492,7 @@ Furthermore,
 \[
  \theta'-(ua+v)-(ub+v)=u(\theta-a-b)+v,
 \]
-and the asserted transformation of \({\cal B}_{S,\delta}\) follows.
+and the asserted transformation of \(\mathcal{B}_{S,\delta}\) follows.
 \end{proof}
 
 \begin{remark}[Auxiliary boundary families]\label{rem:boundary-families}
@@ -726,13 +727,15 @@ In all twenty complete classifications, \(\rho=3\) holds if and only if the
 The enumeration is finite and exact.  For \(q=7,8,9\), every affine
 representative is constructed over its finite field and its covering radius
 is computed directly; this also verifies the assertion that no radius-two
-class occurs.  For \(q=11,13,17\), every affine
+class occurs.  For \(q=11,13\), where radius-three classes persist, every affine
 representative is constructed in Magma and the trisecant-plane cover is
-computed directly; for \(q=11,13\) the covering radius computation was also
-run as an independent check.  For \(q=19,23,29,31,37\), where no hole-free
-class occurs, the scripts record an explicit uncovered projective syndrome
-point for every affine representative.  The new scans for
-\(q=16,25,27,32,41,43,47,49,53\) first test one or two structured projective
+computed directly; the covering radius computation was also run as an
+independent check.  For \(q=16\), all \(536\) affine representatives are
+certified by the two-slice search, with full-space fallback for the residual
+classes.  For \(q=17,19,23,29,31,37\), where no hole-free class occurs, the
+scripts record an explicit uncovered projective syndrome point for every
+affine representative.  The additional scans for
+\(q=25,27,32,41,43,47,49,53\) first test one or two structured projective
 slices and record a point from a full-space fallback whenever both slices
 fail.  The extension-field scans use field-element canonical representatives,
 not integer encodings.  No class remains uncertified.  Proposition
@@ -808,7 +811,7 @@ q & \hbox{type} & S & \delta & \hbox{number of classes}\\
 \hline
 7 & \mathrm{NMDS} & \{0,1,2,3,4,5\} & 0,4 & 2\\
 8 & \mathrm{NMDS} & \{0,1,w,w^2,w^3,w^4\} & 0,1,w^2 & 3\\
-9 & \mathrm{NMDS} & \{0,1,w,w^2,w^3,2\} & \F_9 & 9\\
+9 & \mathrm{NMDS} & \{0,1,w,w^2,w^3,2\} & \delta\in\F_9 & 9\\
 9 & \mathrm{NMDS} & \{0,1,w,w^2,2,w^7\} & 0,w,w^2,w^3 & 4\\
 9 & \mathrm{MDS} & \{0,1,w,w^2,2,w^7\} & 1 & 1
 \end{array}
@@ -816,6 +819,9 @@ q & \hbox{type} & S & \delta & \hbox{number of classes}\\
 \end{center}
 The unique \(\F_8\) class with \(\rho=4\) has the same displayed set
 \(S=\{0,1,w,w^2,w^3,w^4\}\) and \(\delta=w^5\).
+Together with Table~\ref{tab:complete-classification}, this shows that
+every affine class over \(q=7\) and \(q=9\) has radius \(3\), whereas
+radius-four classes already occur over \(q=8\) and \(q=11\).
 
 The multiplicity \(r_S(\delta)\) from Corollary~\ref{cor:duality-mds}
 refines the MDS/NMDS labels.  Its complete low-field radius spectrum is
@@ -1073,65 +1079,65 @@ Here holes denotes the number of projective syndrome points not covered by
 the \(56\) trisecant planes.  Thus the hole-free rows are exactly the
 \(\rho=3\) rows.
 
-\begin{longtable}{r r c c l r r r}
+\begin{longtable}{r r c c l r r}
 \caption{Complete affine classification over \(\F_{11}\) for \(k=4,n=6\).}
 \label{tab:q11-complete}\\
 \toprule
-idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
+idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & holes\\
 \midrule
 \endfirsthead
 \toprule
-idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
+idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & holes\\
 \midrule
 \endhead
-1 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 7 & 1 & 0\\
-2 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 5 & 1 & 0\\
-3 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 3 & 0 & 1\\
-4 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 1 & 1 & 0\\
-5 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 10 & 0 & 1\\
-6 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 8 & 0 & 1\\
-7 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 6 & 1 & 0\\
-8 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 4 & 1 & 0\\
-9 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 2 & 1 & 0\\
-10 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 0 & 0 & 1\\
-11 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 9 & 0 & 1\\
-12 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 9 & 1 & 0\\
-13 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 1 & 1 & 0\\
-14 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 4 & 1 & 0\\
-15 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 7 & 1 & 0\\
-16 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 10 & 1 & 0\\
-17 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 2 & 1 & 0\\
-18 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 5 & 1 & 0\\
-19 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 8 & 1 & 0\\
-20 & 110 & NMDS & 4 & \(\{0,1,2,3,4,7\}\) & 0 & 0 & 1\\
-21 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 3 & 1 & 0\\
-22 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 6 & 1 & 0\\
-23 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 6 & 0 & 1\\
-24 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 4 & 1 & 0\\
-25 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 2 & 1 & 0\\
-26 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 0 & 0 & 1\\
-27 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 9 & 0 & 1\\
-28 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 7 & 0 & 1\\
-29 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 5 & 1 & 0\\
-30 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 3 & 1 & 0\\
-31 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 1 & 1 & 0\\
-32 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 10 & 1 & 0\\
-33 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 8 & 0 & 1\\
-34 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 4 & 0 & 2\\
-35 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 0 & 1 & 0\\
-36 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 2 & 0 & 1\\
-37 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 3 & 0 & 2\\
-38 & 55 & MDS & 3 & \(\{0,1,2,3,4,10\}\) & 10 & 1 & 0\\
-39 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 1 & 1 & 0\\
-40 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 2 & 1 & 0\\
-41 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 1 & 1 & 0\\
-42 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 0 & 1 & 0\\
-43 & 55 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 10 & 1 & 0\\
-44 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 3 & 1 & 0\\
-45 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 4 & 1 & 0\\
-46 & 110 & NMDS & 4 & \(\{0,1,2,4,5,7\}\) & 0 & 0 & 1\\
-47 & 110 & NMDS & 3 & \(\{0,1,2,4,5,7\}\) & 2 & 1 & 0\\
-48 & 22 & MDS & 4 & \(\{0,1,2,4,5,7\}\) & 4 & 0 & 1\\
+1 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 7  & 0\\
+2 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 5  & 0\\
+3 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 3  & 1\\
+4 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 1  & 0\\
+5 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 10  & 1\\
+6 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 8  & 1\\
+7 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 6  & 0\\
+8 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 4  & 0\\
+9 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 2  & 0\\
+10 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 0  & 1\\
+11 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 9  & 1\\
+12 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 9  & 0\\
+13 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 1  & 0\\
+14 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 4  & 0\\
+15 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 7  & 0\\
+16 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 10  & 0\\
+17 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 2  & 0\\
+18 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 5  & 0\\
+19 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 8  & 0\\
+20 & 110 & NMDS & 4 & \(\{0,1,2,3,4,7\}\) & 0  & 1\\
+21 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 3  & 0\\
+22 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 6  & 0\\
+23 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 6  & 1\\
+24 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 4  & 0\\
+25 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 2  & 0\\
+26 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 0  & 1\\
+27 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 9  & 1\\
+28 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 7  & 1\\
+29 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 5  & 0\\
+30 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 3  & 0\\
+31 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 1  & 0\\
+32 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 10  & 0\\
+33 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 8  & 1\\
+34 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 4  & 2\\
+35 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 0  & 0\\
+36 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 2  & 1\\
+37 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 3  & 2\\
+38 & 55 & MDS & 3 & \(\{0,1,2,3,4,10\}\) & 10  & 0\\
+39 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 1  & 0\\
+40 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 2  & 0\\
+41 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 1  & 0\\
+42 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 0  & 0\\
+43 & 55 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 10  & 0\\
+44 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 3  & 0\\
+45 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 4  & 0\\
+46 & 110 & NMDS & 4 & \(\{0,1,2,4,5,7\}\) & 0  & 1\\
+47 & 110 & NMDS & 3 & \(\{0,1,2,4,5,7\}\) & 2  & 0\\
+48 & 22 & MDS & 4 & \(\{0,1,2,4,5,7\}\) & 4  & 1\\
 \bottomrule
 \end{longtable}
 
