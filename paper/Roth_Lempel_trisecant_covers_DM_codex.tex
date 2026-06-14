@@ -553,7 +553,7 @@ Thus \(\mathcal L_2(P)\) is equivalent to syndrome distance at most \(2\).
 Proposition~\ref{prop:explicit-product} says that
 \(\Phi_{S,\delta}(P)=0\) is equivalent to distance at most \(3\), while
 nonvanishing is equivalent to distance \(4\).  Subtracting successive
-layers proves the table.  Finally, the trisecant cover is complete in a
+layers proves the displayed stratification.  Finally, the trisecant cover is complete in a
 radius-three class, so only the first three layers remain.
 \end{proof}
 
@@ -675,7 +675,7 @@ configurations and arcs in projective spaces \cite{Ball2015}.
 \begin{theorem}[Complete small-field classification]\label{thm:complete}
 For the Roth--Lempel codes \(\RL_{4,\delta}(S)\) with \(|S|=6\), the complete
 affine classifications over every prime-power field \(\F_q\) with
-\(7\le q\le53\) are as follows.  No class in the table has radius below \(3\).
+\(7\le q\le53\) are as follows.  No listed class has radius below \(3\).
 {\scriptsize
 \[
 \begin{array}{c|r|r|r|r|r|r}
@@ -1012,7 +1012,8 @@ This section records the complete affine classification for
 affine classes representing \(5082\) raw parameter pairs \((S,\delta)\).
 Exactly \(32\) affine classes, representing \(3410\) raw pairs, have
 \(\rho=3\); the remaining \(16\) affine classes, representing \(1672\) raw
-pairs, have \(\rho=4\).
+pairs, have \(\rho=4\).  The complete list is given in
+Table~\ref{tab:q11-complete}.
 
 \[
 \begin{array}{c|c|c|r|r}
@@ -1031,7 +1032,8 @@ the \(56\) trisecant planes.  Thus the hole-free rows are exactly the
 \(\rho=3\) rows.
 
 \begin{longtable}{r r c c l r r r}
-\caption{All affine classes for \(q=11,k=4,n=6\).}\\
+\caption{Complete affine classification over \(\F_{11}\) for \(k=4,n=6\).}
+\label{tab:q11-complete}\\
 \toprule
 idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
 \midrule
@@ -1092,18 +1094,18 @@ idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
 \end{longtable}
 
 \noindent\textbf{Companion supplementary tables.}
+\begin{sloppypar}
 Complete affine-class tables for
 \[
 q\in\{13,17,19,23,29,31,37\}
 \]
-are supplied in the companion supplementary table file in the public
-repository.  For \(q\in\{19,23,29,31,37\}\), each listed class includes an
-explicit first-hole certificate.  The full class-level results for
-\(q=7,8,9\) are contained in the exact small-prime-power log.  Exact
-certificate logs for the later fields \(q=41,43,47,49,53\) and the
-extension fields \(q=16,25,27,32\) are listed in
-Section~\ref{sec:reproducibility} and are available in the public repository
-above.
+are supplied in the companion supplementary file in the public
+repository.  For \(q=19,23,29,31,37\), each listed class includes an explicit
+first-hole certificate.  The full class-level results for \(q=7,8,9\) are
+contained in the exact small-prime-power log.  Exact certificate logs for
+the remaining certified fields are listed in Section~\ref{sec:reproducibility}
+and are available in the public repository above.
+\end{sloppypar}
 
 
 \section{Discussion}
