@@ -15,13 +15,14 @@
 \newcommand{\wt}{\mathrm{wt}}
 
 \theoremstyle{plain}
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
-\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
 
 \title{Covering radii and deep-hole syndromes of\\
 length-eight Roth--Lempel codes}
@@ -1205,8 +1206,6 @@ family is the MDS class over \(\F_{16}\) with
 \]
 These two-parameter families are used only as explicit finite certificates;
 no stronger uniform threshold theorem is asserted for them.
-The complete thirty-row list is supplied in
-\path{Roth_Lempel_boundary_certificates_codex_supplement.tex}.
 
 \section{Conclusion}
 
