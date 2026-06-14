@@ -46,6 +46,23 @@ small-field classification. The same boundary field is also covered by the
 theoretical threshold proof after the twelve residual representatives are
 certified by the boundary-certificate supplement.
 
+### Historical one-slice scan summary
+
+Before the two-slice scan was run, a one-slice scan searched first in
+`P=[1,u,v,v]` and invoked a full-space fallback only when that slice contained
+no hole. It is retained as a cross-check, not as an independent proof input in
+the final article.
+
+| `q` | affine classes | `P=[1,u,v,v]` certificates | fallback certificates | uncertified |
+| --- | ---: | ---: | ---: | ---: |
+| 17 | 777 | 695 | 82 | 0 |
+| 19 | 1514 | 1415 | 99 | 0 |
+| 23 | 4596 | 4396 | 200 | 0 |
+| 29 | 16978 | 16164 | 814 | 0 |
+| 31 | 24562 | 23434 | 1128 | 0 |
+| 37 | 64604 | 61632 | 2972 | 0 |
+| 41 | 112439 | 107526 | 4913 | 0 |
+
 ## Data extracts
 
 - Complete low-field census: `plans/codex_low_field_deephole_census_supplement_20260525.md`.
