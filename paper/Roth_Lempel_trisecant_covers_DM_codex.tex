@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+﻿\documentclass[11pt]{article}
 
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
@@ -981,7 +981,8 @@ representative families.
 \mathrm{NMDS} & \{0,1,2,4,5,7\} & 2
 \end{array}
 \]
-These rows account for \(32\) affine classes.
+These rows account for \(32\) affine classes; the full \(q=11\) affine list
+is given in Section~\ref{sec:q11-complete}.
 
 \begin{corollary}[The seven \(\F_{13}\) classes]\label{cor:q13-seven}
 Over \(\F_{13}\), exactly the following seven affine classes have covering
@@ -1001,6 +1002,108 @@ radius \(3\).
 \]
 All remaining \(139\) affine classes have covering radius \(4\).
 \end{corollary}
+
+\section{Complete \texorpdfstring{\(q=11\)}{q=11} affine classification}
+\label{sec:q11-complete}
+
+This section records the complete affine classification for
+\(\RL_{4,\delta}(S)\) over \(\F_{11}\), with \(|S|=6\).  There are \(48\)
+affine classes representing \(5082\) raw parameter pairs \((S,\delta)\).
+Exactly \(32\) affine classes, representing \(3410\) raw pairs, have
+\(\rho=3\); the remaining \(16\) affine classes, representing \(1672\) raw
+pairs, have \(\rho=4\).
+
+\[
+\begin{array}{c|c|c|r|r}
+\hbox{type} & \rho & \hbox{holes} & \hbox{affine classes} & \hbox{raw cases}\\
+\hline
+\mathrm{MDS}  & 3 & 0 & 1  & 55\\
+\mathrm{NMDS} & 3 & 0 & 31 & 3355\\
+\mathrm{MDS}  & 4 & 1 & 1  & 22\\
+\mathrm{NMDS} & 4 & 1 & 13 & 1430\\
+\mathrm{NMDS} & 4 & 2 & 2  & 220
+\end{array}
+\]
+
+Here holes denotes the number of projective syndrome points not covered by
+the \(56\) trisecant planes.  Thus the hole-free rows are exactly the
+\(\rho=3\) rows.
+
+\begin{longtable}{r r c c l r r r}
+\caption{All affine classes for \(q=11,k=4,n=6\).}\\
+\toprule
+idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
+\midrule
+\endfirsthead
+\toprule
+idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
+\midrule
+\endhead
+1 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 7 & 1 & 0\\
+2 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 5 & 1 & 0\\
+3 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 3 & 0 & 1\\
+4 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 1 & 1 & 0\\
+5 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 10 & 0 & 1\\
+6 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 8 & 0 & 1\\
+7 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 6 & 1 & 0\\
+8 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 4 & 1 & 0\\
+9 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 2 & 1 & 0\\
+10 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 0 & 0 & 1\\
+11 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 9 & 0 & 1\\
+12 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 9 & 1 & 0\\
+13 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 1 & 1 & 0\\
+14 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 4 & 1 & 0\\
+15 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 7 & 1 & 0\\
+16 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 10 & 1 & 0\\
+17 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 2 & 1 & 0\\
+18 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 5 & 1 & 0\\
+19 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 8 & 1 & 0\\
+20 & 110 & NMDS & 4 & \(\{0,1,2,3,4,7\}\) & 0 & 0 & 1\\
+21 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 3 & 1 & 0\\
+22 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 6 & 1 & 0\\
+23 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 6 & 0 & 1\\
+24 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 4 & 1 & 0\\
+25 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 2 & 1 & 0\\
+26 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 0 & 0 & 1\\
+27 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 9 & 0 & 1\\
+28 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 7 & 0 & 1\\
+29 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 5 & 1 & 0\\
+30 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 3 & 1 & 0\\
+31 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 1 & 1 & 0\\
+32 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 10 & 1 & 0\\
+33 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 8 & 0 & 1\\
+34 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 4 & 0 & 2\\
+35 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 0 & 1 & 0\\
+36 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 2 & 0 & 1\\
+37 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 3 & 0 & 2\\
+38 & 55 & MDS & 3 & \(\{0,1,2,3,4,10\}\) & 10 & 1 & 0\\
+39 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 1 & 1 & 0\\
+40 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 2 & 1 & 0\\
+41 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 1 & 1 & 0\\
+42 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 0 & 1 & 0\\
+43 & 55 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 10 & 1 & 0\\
+44 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 3 & 1 & 0\\
+45 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 4 & 1 & 0\\
+46 & 110 & NMDS & 4 & \(\{0,1,2,4,5,7\}\) & 0 & 0 & 1\\
+47 & 110 & NMDS & 3 & \(\{0,1,2,4,5,7\}\) & 2 & 1 & 0\\
+48 & 22 & MDS & 4 & \(\{0,1,2,4,5,7\}\) & 4 & 0 & 1\\
+\bottomrule
+\end{longtable}
+
+\noindent\textbf{Companion supplementary tables.}
+Complete affine-class tables for
+\[
+q\in\{13,17,19,23,29,31,37\}
+\]
+are supplied in the companion supplementary table file in the public
+repository.  For \(q\in\{19,23,29,31,37\}\), each listed class includes an
+explicit first-hole certificate.  The full class-level results for
+\(q=7,8,9\) are contained in the exact small-prime-power log.  Exact
+certificate logs for the later fields \(q=41,43,47,49,53\) and the
+extension fields \(q=16,25,27,32\) are listed in
+Section~\ref{sec:reproducibility} and are available in the public repository
+above.
+
 
 \section{Discussion}
 
@@ -1026,10 +1129,10 @@ the relevant thresholds to \(q\ge54\) for MDS codes and \(q\ge53\) for NMDS
 codes.  More sharply for the Roth--Lempel family itself,
 Proposition~\ref{prop:twisted-centers} replaces this tail argument by
 explicit deep-hole centers for every \(q\ge23\), and for every NMDS member
-already when \(q\ge19\).  Consequently Theorem~\ref{thm:threshold} is a complete statement for
-the entire length-eight family: a covering-radius drop can occur only below
-\(q=16\), and it occurs exactly in the classes enumerated over
-\(q=7,8,9,11,13\).
+already when \(q\ge19\).  Consequently
+Theorem~\ref{thm:threshold} is a complete statement for the entire
+length-eight family: a covering-radius drop can occur only below \(q=16\),
+and it occurs exactly in the classes enumerated over \(q=7,8,9,11,13\).
 Proposition~\ref{prop:explicit-product} and
 Corollary~\ref{cor:explicit-deepholes} add a complementary infinite
 conclusion: once \(q\ge16\), the deep holes are not merely known to exist;
@@ -1162,105 +1265,6 @@ available at
 \begin{center}
 \url{https://github.com/matheorist/roth-lempel-covering-radius}.
 \end{center}
-
-\section{Complete \texorpdfstring{\(q=11\)}{q=11} affine classification}
-
-This section records the complete affine classification for
-\(\RL_{4,\delta}(S)\) over \(\F_{11}\), with \(|S|=6\).  There are \(48\)
-affine classes representing \(5082\) raw parameter pairs \((S,\delta)\).
-Exactly \(32\) affine classes, representing \(3410\) raw pairs, have
-\(\rho=3\); the remaining \(16\) affine classes, representing \(1672\) raw
-pairs, have \(\rho=4\).
-
-\[
-\begin{array}{c|c|c|r|r}
-\hbox{type} & \rho & \hbox{holes} & \hbox{affine classes} & \hbox{raw cases}\\
-\hline
-\mathrm{MDS}  & 3 & 0 & 1  & 55\\
-\mathrm{NMDS} & 3 & 0 & 31 & 3355\\
-\mathrm{MDS}  & 4 & 1 & 1  & 22\\
-\mathrm{NMDS} & 4 & 1 & 13 & 1430\\
-\mathrm{NMDS} & 4 & 2 & 2  & 220
-\end{array}
-\]
-
-Here holes denotes the number of projective syndrome points not covered by
-the \(56\) trisecant planes.  Thus the hole-free rows are exactly the
-\(\rho=3\) rows.
-
-\begin{longtable}{r r c c l r r r}
-\caption{All affine classes for \(q=11,k=4,n=6\).}\\
-\toprule
-idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
-\midrule
-\endfirsthead
-\toprule
-idx & orbit & type & \(\rho\) & \(S\) & \(\delta\) & min & holes\\
-\midrule
-\endhead
-1 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 7 & 1 & 0\\
-2 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 5 & 1 & 0\\
-3 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 3 & 0 & 1\\
-4 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 1 & 1 & 0\\
-5 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 10 & 0 & 1\\
-6 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 8 & 0 & 1\\
-7 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 6 & 1 & 0\\
-8 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 4 & 1 & 0\\
-9 & 110 & NMDS & 3 & \(\{0,1,2,3,5,6\}\) & 2 & 1 & 0\\
-10 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 0 & 0 & 1\\
-11 & 110 & NMDS & 4 & \(\{0,1,2,3,5,6\}\) & 9 & 0 & 1\\
-12 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 9 & 1 & 0\\
-13 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 1 & 1 & 0\\
-14 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 4 & 1 & 0\\
-15 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 7 & 1 & 0\\
-16 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 10 & 1 & 0\\
-17 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 2 & 1 & 0\\
-18 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 5 & 1 & 0\\
-19 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 8 & 1 & 0\\
-20 & 110 & NMDS & 4 & \(\{0,1,2,3,4,7\}\) & 0 & 0 & 1\\
-21 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 3 & 1 & 0\\
-22 & 110 & NMDS & 3 & \(\{0,1,2,3,4,7\}\) & 6 & 1 & 0\\
-23 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 6 & 0 & 1\\
-24 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 4 & 1 & 0\\
-25 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 2 & 1 & 0\\
-26 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 0 & 0 & 1\\
-27 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 9 & 0 & 1\\
-28 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 7 & 0 & 1\\
-29 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 5 & 1 & 0\\
-30 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 3 & 1 & 0\\
-31 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 1 & 1 & 0\\
-32 & 110 & NMDS & 3 & \(\{0,1,2,3,4,6\}\) & 10 & 1 & 0\\
-33 & 110 & NMDS & 4 & \(\{0,1,2,3,4,6\}\) & 8 & 0 & 1\\
-34 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 4 & 0 & 2\\
-35 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 0 & 1 & 0\\
-36 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 2 & 0 & 1\\
-37 & 110 & NMDS & 4 & \(\{0,1,2,3,4,10\}\) & 3 & 0 & 2\\
-38 & 55 & MDS & 3 & \(\{0,1,2,3,4,10\}\) & 10 & 1 & 0\\
-39 & 110 & NMDS & 3 & \(\{0,1,2,3,4,10\}\) & 1 & 1 & 0\\
-40 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 2 & 1 & 0\\
-41 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 1 & 1 & 0\\
-42 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 0 & 1 & 0\\
-43 & 55 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 10 & 1 & 0\\
-44 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 3 & 1 & 0\\
-45 & 110 & NMDS & 3 & \(\{0,1,2,3,5,9\}\) & 4 & 1 & 0\\
-46 & 110 & NMDS & 4 & \(\{0,1,2,4,5,7\}\) & 0 & 0 & 1\\
-47 & 110 & NMDS & 3 & \(\{0,1,2,4,5,7\}\) & 2 & 1 & 0\\
-48 & 22 & MDS & 4 & \(\{0,1,2,4,5,7\}\) & 4 & 0 & 1\\
-\bottomrule
-\end{longtable}
-
-\noindent\textbf{Companion appendices.}
-Complete affine-class tables for \(q=13,17,19,23,29,31,37\) are supplied as
-Appendices B--H in the companion appendix volume:
-\begin{center}
-\footnotesize\path{Roth_Lempel_trisecant_covers_DM_codex_appendices_BH_q13_q37.pdf}.
-\end{center}
-For \(q=19,23,29,31,37\), each listed class includes an explicit first-hole
-certificate.  The full class-level results for \(q=7,8,9\) are contained in
-the exact small-prime-power log.  Exact certificate logs for the later fields
-\(q=41,43,47,49,53\) and the extension fields \(q=16,25,27,32\) are listed
-in Section~\ref{sec:reproducibility} and are available in the public
-repository above.
 
 \begin{thebibliography}{99}
 
