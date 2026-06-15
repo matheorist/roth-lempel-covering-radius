@@ -353,7 +353,7 @@ having neither a collision nor a collinear triple.
 Thus the uncovered syndrome points are not only deep-hole cosets; they are
 also constructive centers for producing plane \(8\)-arcs from the
 Roth--Lempel parity-check configuration.  The explicit centers constructed
-below therefore give a finite-geometric witness for the existence of such
+next therefore give a finite-geometric witness for the existence of such
 projected arcs in the non-exceptional range.
 
 \begin{proposition}
@@ -508,7 +508,7 @@ Substitution in the factors of Proposition~\ref{prop:explicit-product}
 shows that, once the first parameter avoids the corresponding secant
 obstructions, each remaining triple-plane obstruction excludes one value
 of the second parameter.  These families compress the boundary
-certificates below, but their elementary count does not improve the
+certificates used later, but their elementary count does not improve the
 uniform threshold in Proposition~\ref{prop:twisted-centers}.
 \end{remark}
 
@@ -672,10 +672,11 @@ For each prime power
 \[
 q\in\{7,8,9,11,13,16,17,19,23,25,27,29,31,32,37,41,43,47,49,53\}
 \]
-we enumerated all pairs \((S,\delta)\) with
-\(|S|=6\), reduced them under the affine action above, and either computed
-the covering radius or certified radius \(4\) by an explicit uncovered
-syndrome point for \(\RL_{4,\delta}(S)\).  This normalization is the natural affine
+all pairs \((S,\delta)\) with \(|S|=6\) were enumerated and reduced under
+the affine action from Section~2.  For each affine representative, the
+covering radius was computed directly or radius \(4\) was certified by an
+explicit uncovered syndrome point for \(\RL_{4,\delta}(S)\).  This
+normalization is the natural affine
 specialization of the finite-geometric equivalence used for point
 configurations and arcs in projective spaces~\cite{Ball2015}.
 
@@ -683,7 +684,7 @@ configurations and arcs in projective spaces~\cite{Ball2015}.
 For the Roth--Lempel codes \(\RL_{4,\delta}(S)\) with \(|S|=6\), the complete
 affine classifications over every prime-power field \(\F_q\) with
 \(7\le q\le53\) are summarized in Table~\ref{tab:complete-classification}.
-No listed class has radius below \(3\).
+No class in these classifications has radius below \(3\).
 \begin{center}
 \captionof{table}{Complete affine classifications for
 \(\RL_{4,\delta}(S)\), \(|S|=6\), over \(7\le q\le53\).}
@@ -935,7 +936,7 @@ Here holes means the number of projective syndrome points not covered by the
 \(56\) trisecant planes.  Thus the rows with holes \(0\) are precisely the
 classes with \(\rho=3\), and every remaining row has \(\rho=4\).
 
-For \(q=17,19,23,29,31,37\), Table~\ref{tab:negative-mds-nmds} shows the
+For \(q=17,19,23,29,31,37\), Table~\ref{tab:negative-mds-nmds} records the
 MDS/NMDS split in fields where no radius-three class occurs.
 \begin{center}
 \captionof{table}{MDS/NMDS classification for fields with no radius-three
@@ -955,16 +956,17 @@ classes.}
 \bottomrule
 \end{tabular}
 \end{center}
-No affine class is hole-free for \(q=17,19,23,29,31,37\).  For \(q=17\), where full
+No affine class is hole-free for \(q=17,19,23,29,31,37\).  For \(q=17\),
+where full
 hole counts were recorded, the number of uncovered projective syndrome points
 ranges from \(28\) to \(117\) across the \(777\) classes.  For \(q=19,23,29,31,37\),
 the original computation records an explicit first uncovered syndrome point
 for every affine class.
 
-An earlier one-slice certificate computation, searching first in the
+An earlier one-slice certificate computation, which searches first in the
 structured projective slice \(P=[1,u,v,v]\), is retained in the
 reproducibility manifest as a historical cross-check.  The stronger
-two-slice scan below is the compact form reported in the article.
+two-slice scan is the compact form reported in the article.
 
 A strengthened two-slice scan first searches \(P=[1,u,v,v]\), then
 \(P=[1,u,v,u]\), and invokes full-space search only if both slices fail.
@@ -1148,7 +1150,7 @@ the exceptional classes with \(\rho=3\) admit no such center.
 This viewpoint suggests a finite-geometric version of the general problem:
 classify eight-point configurations in \(\PG(3,q)\) arising from
 \(\RL_{4,\delta}(S)\) whose \(56\) trisecant planes cover the ambient space.
-The complete results above show that this cover property occurs throughout
+The complete classifications show that this cover property occurs throughout
 \(q=7,9\), in three of four classes at \(q=8\), is common at \(q=11\), rare
 at \(q=13\), and absent in every complete affine classification over
 prime-power fields \(16\le q\le53\); the seven exceptional classes over
@@ -1253,7 +1255,8 @@ Proposition~\ref{prop:twisted-centers} resolves every representative except
 settled by explicit centers from the families \(W(x,\mu)\) and \(Q(t,u)\)
 in Remark~\ref{rem:boundary-families}; the certificates themselves are
 listed in the companion supplement
-\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/certificates/supplement.tex}
+\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/%
+certificates/supplement.tex}
 {available in the public repository}.
 For every \(q\geq 23\), Theorem~\ref{thm:threshold} is theoretical and does
 not depend on an exhaustive machine scan.  The complete-classification scans
@@ -1299,7 +1302,8 @@ Additional exact scans consistent with the theorem; not proof inputs.\\
 \end{center}
 
 The accompanying
-\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/paper/reproducibility.md}
+\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/%
+paper/reproducibility.md}
 {program-and-log reproducibility manifest} records the
 Magma files, exact output logs, extracted tables, and the logical role of
 each computation.  This keeps the article-level argument separate from
