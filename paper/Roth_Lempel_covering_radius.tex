@@ -73,14 +73,13 @@ codes~\cite{RothLempel1989}.
 The recent literature closest to the present problem has developed in two
 directions.  Han and Fan, and subsequently Xu and Zhou, investigate NMDS
 criteria and weight distributions for Roth--Lempel
-codes~\cite{HanFan2023,XuZhou2026}; Liang and Liao construct further NMDS classes
-from the Roth--Lempel matrix~\cite{LiangLiao2026}.  In parallel, covering
-radii and deep holes have become structural tools for extended twisted-GRS
-and non-GRS MDS--NMDS
+codes~\cite{HanFan2023,XuZhou2026}; Liang and Liao construct further NMDS
+classes from the Roth--Lempel matrix~\cite{LiangLiao2026}.  In parallel,
+covering radii and deep holes have become structural tools for extended
+twisted-GRS and non-GRS MDS--NMDS
 constructions~\cite{LiZhuSun2025,LiLuLingLam2026}.  Distinct from these works,
-this paper
-determines the complete covering-radius threshold and explicit deep-hole
-syndrome criterion for the fixed length-eight, dimension-four
+this paper determines the complete covering-radius threshold and explicit
+deep-hole syndrome criterion for the fixed length-eight, dimension-four
 Roth--Lempel family.
 
 The problem is particularly sharp in this family.  Since every
@@ -108,7 +107,7 @@ there are \(2,3,14,32,7\) over \(q=7,8,9,11,13\), respectively
 lies in one of the \(56\) planes spanned by triples of parity-check columns
 (Proposition~\ref{prop:criterion}).  Consequently, uncovered points are
 simultaneously deep-hole syndromes and projection centers that produce plane
-\(8\)-arcs (Lemma~\ref{prop:projection}).
+\(8\)-arcs (Lemma~\ref{lem:projection}).
 \item For \(q\ge16\), all deep-hole syndromes are characterized by the
 nonvanishing of one explicit product of \(56\) linear factors
 (Proposition~\ref{prop:explicit-product}).  The twisted-cubic subfamily of
@@ -127,9 +126,9 @@ Corollary~\ref{cor:closed-shells}).
 \end{enumerate}
 
 Thus the paper gives a complete structure theorem for the classical
-Roth--Lempel family of MDS and NMDS codes.  The result also supplies an infinite collection
-of certified
-\([8,4]_q\) Roth--Lempel seed codes with maximal covering radius and
+Roth--Lempel family of MDS and NMDS codes.  The result also supplies an
+infinite collection of certified \([8,4]_q\) Roth--Lempel seed codes with
+maximal covering radius and
 explicitly decidable deep-hole syndromes for deep-hole-based extension
 constructions; see Corollary~\ref{cor:seed-codes}.  The finite part of the
 proof uses exact Magma enumeration, not randomized search.  The
@@ -191,8 +190,8 @@ Write the last two generator columns as
 \(v(a)=(1,a,a^2,a^3)^{\mathsf T}\), \(a\in S\).  Every three columns are
 independent: this is the Vandermonde determinant for three evaluation
 columns, and with one or two of \(e,f\) it follows respectively from the
-rank-two projection of two distinct evaluation columns onto the first two coordinates, or
-from the nonzero first coordinate of a single evaluation column together
+rank-two projection of two distinct evaluation columns onto the first two
+coordinates, or from the nonzero first coordinate of a single evaluation column together
 with the independence of \(e,f\).  Every
 five columns have rank four.  This is immediate if at least four evaluation
 columns occur; if exactly three occur, then both \(e,f\) occur and quotienting
@@ -205,7 +204,7 @@ The only four-column sets that can become dependent are
 factor times \(\delta-(a+b+c)\).  This proves the final assertion.
 \end{proof}
 
-\begin{lemma}\label{prop:duality}
+\begin{lemma}\label{lem:duality}
 Put \(\sigma=\sum_{a\in S}a\), \(\theta=\sigma-\delta\), and
 \[
   \lambda_i=\left(\prod_{j\ne i}(a_i-a_j)\right)^{-1}.
@@ -259,10 +258,10 @@ Moreover,
 The type criterion is Proposition~\ref{prop:exhaustion}.  Complementation
 maps a three-subset of sum \(\delta\) bijectively to a three-subset of sum
 \(\sum_{a\in S}a-\delta\), in agreement with
-Lemma~\ref{prop:duality}.
+Lemma~\ref{lem:duality}.
 \end{proof}
 
-\begin{lemma}\label{prop:second-shell}
+\begin{lemma}\label{lem:second-shell}
 For \(C=\RL_{4,\delta}(S)\), let \(r_S(\delta)\) be as in
 Corollary~\ref{cor:duality-mds}.  The number \(m_2(C)\) of projective
 syndrome points at distance exactly \(2\) satisfies
@@ -281,7 +280,7 @@ the secants has
 \]
 points, and hence \(m_2(C)=28(q-1)\).
 
-By Lemma~\ref{prop:duality}, every dependent four-set of parity-check
+By Lemma~\ref{lem:duality}, every dependent four-set of parity-check
 points has the form
 \[
   \{V(a),V(b),V(c),E\},\qquad a+b+c=\theta.
@@ -335,7 +334,7 @@ cover \(\PG(3,q)\).  The final assertion is the standard redundancy
 bound~\cite{Cohen1997,Huffman2003}.
 \end{proof}
 
-\begin{lemma}\label{prop:projection}
+\begin{lemma}\label{lem:projection}
 With the notation of Proposition~\ref{prop:criterion}, a projective point
 \(P\in\PG(3,q)\) is not covered by the \(56\) triple spans if and only if
 projection from \(P\) maps \(H_1,\ldots,H_8\) to eight points of a plane with
@@ -362,7 +361,7 @@ projected arcs in the non-exceptional range.
 Let \(C=\RL_{4,\delta}(S)\), let
 \(\theta=\sum_{a\in S}a-\delta\), and choose homogeneous coordinates
 \(P=(p_0,p_1,p_2,p_3)\) for a projective syndrome relative to the
-parity-check matrix in Lemma~\ref{prop:duality}.  Define
+parity-check matrix in Lemma~\ref{lem:duality}.  Define
 \[
 \begin{aligned}
 A_a(P)&=p_1-ap_0,\\
@@ -386,7 +385,7 @@ condition.
 \end{proposition}
 
 \begin{proof}
-By Lemma~\ref{prop:duality}, column scaling does not affect the
+By Lemma~\ref{lem:duality}, column scaling does not affect the
 projective spans, and the parity-check points may be written as
 \[
  V(a)=(1,a,a^2,a^3)^{\mathsf T}\quad(a\in S),\qquad
@@ -474,7 +473,7 @@ words.
 \end{proof}
 
 \begin{lemma}
-\label{prop:affine-covariance}
+\label{lem:affine-covariance}
 Let \(S'=uS+v\) and \(\delta'=u\delta+3v\), where
 \(u\in\F_q^\ast\) and \(v\in\F_q\).  If
 \(\theta=\sum_{a\in S}a-\delta\) and
@@ -566,7 +565,7 @@ complete in a radius-three class, so only the first three layers remain.
 \end{proof}
 
 \begin{lemma}
-\label{prop:deep-census}
+\label{lem:deep-census}
 Let \(C\) be an \([8,4]_q\) code and, for \(1\le t\le4\), let \(m_t(C)\)
 denote the number of projective syndrome points whose minimum expression as a
 span of parity-check columns uses exactly \(t\) columns.  Then
@@ -606,12 +605,12 @@ In particular, if \(\rho(C)=3\), then
 
 \begin{proof}
 The eight projective parity-check columns are distinct, so \(m_1(C)=8\).
-Lemma~\ref{prop:second-shell} gives \(m_2(C)\), and
+Lemma~\ref{lem:second-shell} gives \(m_2(C)\), and
 \[
  m_1(C)+m_2(C)+m_3(C)+m_4(C)=q^3+q^2+q+1.
 \]
 Solving for \(m_3(C)\) gives the stated vector.  If \(\rho(C)=3\), then
-\(h=0\), and Lemma~\ref{prop:deep-census} converts \(m_3(C)\) to
+\(h=0\), and Lemma~\ref{lem:deep-census} converts \(m_3(C)\) to
 the number of deep-hole words.
 \end{proof}
 
@@ -778,7 +777,7 @@ class-by-class computational verification.
 \label{cor:explicit-deepholes}
 Let \(q\ge16\), let \(C=\RL_{4,\delta}(S)\) with \(|S|=6\), and let \(u\)
 be a word with nonzero syndrome \(P=Hu^{\mathsf T}\), using the explicit
-matrix \(H\) in Lemma~\ref{prop:duality}.  Then \(u\) is a deep hole
+matrix \(H\) in Lemma~\ref{lem:duality}.  Then \(u\) is a deep hole
 of \(C\) if and only if
 \[
   \Phi_{S,\delta}(P)\ne0.
@@ -867,10 +866,10 @@ the code type nor the number of dependent four-column sets determines the
 covering radius.  For instance, over \(\F_{11}\) both radius values occur
 when \(r_S(\delta)=0,2\), or \(3\); over \(\F_{13}\), all radius-three
 classes have \(r_S(\delta)\le1\).
-In contrast, Lemma~\ref{prop:second-shell} shows that this same
+In contrast, Lemma~\ref{lem:second-shell} shows that this same
 additive statistic determines the entire second syndrome shell exactly.
 
-Lemma~\ref{prop:deep-census} also turns the exceptional classification
+Lemma~\ref{lem:deep-census} also turns the exceptional classification
 into an exact deep-hole census.  Table~\ref{tab:dh-coset-spectrum} gives
 the complete spectrum for the classes with \(\rho=3\); ``DH cosets'' denotes
 \((q-1)m_3(C)\), and every such coset contains \(q^4\) deep-hole words.
@@ -936,8 +935,8 @@ Here holes means the number of projective syndrome points not covered by the
 \(56\) trisecant planes.  Thus the rows with holes \(0\) are precisely the
 classes with \(\rho=3\), and every remaining row has \(\rho=4\).
 
-For \(q=17,19,23,29,31,37\), Table~\ref{tab:negative-mds-nmds} shows that
-the classification by MDS/NMDS type is purely negative.
+For \(q=17,19,23,29,31,37\), Table~\ref{tab:negative-mds-nmds} shows the
+MDS/NMDS split in fields where no radius-three class occurs.
 \begin{center}
 \captionof{table}{MDS/NMDS classification for fields with no radius-three
 classes.}
@@ -1142,7 +1141,7 @@ The classification separates two related but distinct effects.  The MDS or
 NMDS status of a Roth--Lempel code is governed by additive constraints on
 subsets of \(S\).  The covering-radius drop from \(4\) to \(3\), however, is a
 global covering property of the eight parity-check points in \(\PG(3,q)\).
-In the language of Lemma~\ref{prop:projection}, the classes with
+In the language of Lemma~\ref{lem:projection}, the classes with
 \(\rho=4\) admit at least one projection center producing a plane \(8\)-arc;
 the exceptional classes with \(\rho=3\) admit no such center.
 
@@ -1174,8 +1173,8 @@ gap below this threshold: in the exceptional radius-three classes, the deep
 holes are given explicitly by exclusion from the \(28\) displayed secant
 lines.  Finally, the \(r_S(\delta)\)-spectrum shows why MDS/NMDS status alone
 cannot replace the trisecant-cover condition, even though
-Lemma~\ref{prop:second-shell} shows that it completely controls the
-second shell.  Lemma~\ref{prop:affine-covariance} also ensures that
+Lemma~\ref{lem:second-shell} shows that it completely controls the
+second shell.  Lemma~\ref{lem:affine-covariance} also ensures that
 the new twisted-cubic certificates are intrinsic to affine classes rather
 than artifacts of the chosen representatives.
 Corollary~\ref{cor:closed-shells} further replaces the radius-three
