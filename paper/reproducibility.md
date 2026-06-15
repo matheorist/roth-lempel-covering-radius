@@ -2,8 +2,7 @@
 
 This manifest accompanies `Roth_Lempel_covering_radius.tex`.
 It separates computations required by the mathematical argument from larger
-independent scans retained for checking and future extension. It supersedes
-`Roth_Lempel_reproducibility_manifest_20260526.md` by making explicit
+independent scans retained for checking and future extension. It makes explicit
 that the `q=16` two-slice scan, the extension-field scans, and the thirty
 boundary certificates are included in the reproducibility record.
 
@@ -17,8 +16,7 @@ boundary certificates are included in the reproducibility record.
 | Residual boundary-count determination | `q=16,17,19` | `magma/round42_stratified_boundary_need.m` | `magma/round42_stratified_boundary_need.log` |
 | Explicit residual boundary certificates | `q=16,17,19` | `magma/rounds11_18_boundary_certificate_analysis.m`; `magma/round24_infinite_plane_centers_boundary.m` | `magma/rounds11_18_boundary_certificate_analysis.log`; `magma/round24_infinite_plane_centers_boundary.log` |
 
-The thirty displayed residual certificates are supplied in
-`Roth_Lempel_boundary_certificates_supplement.tex`.
+The thirty displayed residual certificates are supplied in `supplement.tex`.
 
 ## Formula and covariance verification
 
