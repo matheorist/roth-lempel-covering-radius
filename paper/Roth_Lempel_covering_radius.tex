@@ -172,7 +172,7 @@ acts on parameters by
 \]
 All classifications below are taken modulo this affine action.
 
-\begin{proposition}[MDS/NMDS exhaustion for the family]\label{prop:exhaustion}
+\begin{proposition}\label{prop:exhaustion}
 For every prime power \(q\ge7\), every code
 \(\RL_{4,\delta}(S)\), with \(S\subseteq\F_q\) and \(|S|=6\), is either MDS
 or NMDS.  More precisely, it is NMDS if and only if
@@ -202,7 +202,7 @@ The only four-column sets that can become dependent are
 factor times \(\delta-(a+b+c)\).  This proves the final assertion.
 \end{proof}
 
-\begin{proposition}[Parity-check duality]\label{prop:duality}
+\begin{proposition}\label{prop:duality}
 Put \(\sigma=\sum_{a\in S}a\), \(\theta=\sigma-\delta\), and
 \[
   \lambda_i=\left(\prod_{j\ne i}(a_i-a_j)\right)^{-1}.
@@ -241,7 +241,7 @@ the last two columns produces the eight columns
 which are precisely the generator columns of \(\RL_{4,\theta}(S)\).
 \end{proof}
 
-\begin{corollary}[Dual invariance of the MDS criterion]
+\begin{corollary}
 \label{cor:duality-mds}
 Let \(r_S(\delta)\) denote the number of three-subsets \(T\subset S\) with
 \(\sum_{a\in T}a=\delta\).  Then \(C\) is MDS if and only if
@@ -259,7 +259,7 @@ maps a three-subset of sum \(\delta\) bijectively to a three-subset of sum
 Proposition~\ref{prop:duality}.
 \end{proof}
 
-\begin{proposition}[Second syndrome shell]\label{prop:second-shell}
+\begin{proposition}\label{prop:second-shell}
 For \(C=\RL_{4,\delta}(S)\), let \(r_S(\delta)\) be as in
 Corollary~\ref{cor:duality-mds}.  The number \(m_2(C)\) of projective
 syndrome points at distance exactly \(2\) satisfies
@@ -307,7 +307,7 @@ syndrome \(s\in\F_q^4\) has a coset representative of weight at most \(t\) if
 and only if its projective point lies in the projective span of at most \(t\)
 columns of \(H\).  For \(t=3\) this gives the following criterion.
 
-\begin{proposition}[Trisecant-plane criterion]\label{prop:criterion}
+\begin{proposition}\label{prop:criterion}
 Let \(C\) be an \([8,4]_q\) linear code with parity-check columns
 \(H_1,\ldots,H_8\in\PG(3,q)\).  Then
 \[
@@ -332,7 +332,7 @@ cover \(\PG(3,q)\).  The final assertion is the standard redundancy bound
 \cite{Cohen1997,Huffman2003}.
 \end{proof}
 
-\begin{proposition}[Uncovered syndromes as projection centers]\label{prop:projection}
+\begin{proposition}\label{prop:projection}
 With the notation of Proposition~\ref{prop:criterion}, a projective point
 \(P\in\PG(3,q)\) is not covered by the \(56\) triple spans if and only if
 projection from \(P\) maps \(H_1,\ldots,H_8\) to eight points of a plane with
@@ -354,7 +354,7 @@ Roth--Lempel parity-check configuration.  The explicit centers constructed
 below therefore give a finite-geometric witness for the existence of such
 projected arcs in the non-exceptional range.
 
-\begin{proposition}[Fifty-six-factor uncovered-syndrome criterion]
+\begin{proposition}
 \label{prop:explicit-product}
 Let \(C=\RL_{4,\delta}(S)\), let
 \(\theta=\sum_{a\in S}a-\delta\), and write a projective syndrome relative
@@ -406,7 +406,7 @@ none of the displayed \(56\) factors vanishes.  The final statement follows
 from Proposition~\ref{prop:criterion}.
 \end{proof}
 
-\begin{proposition}[Twisted-cubic deep-hole centers]
+\begin{proposition}
 \label{prop:twisted-centers}
 Let \(C=\RL_{4,\delta}(S)\), put
 \(\theta=\sum_{a\in S}a-\delta\), and set
@@ -470,7 +470,7 @@ contains \(q^4(q-1)\) words, giving the stated lower bound for deep-hole
 words.
 \end{proof}
 
-\begin{proposition}[Affine covariance of twisted-cubic centers]
+\begin{proposition}
 \label{prop:affine-covariance}
 Let \(S'=uS+v\) and \(\delta'=u\delta+3v\), where
 \(u\in\F_q^\ast\) and \(v\in\F_q\).  If
@@ -497,7 +497,7 @@ Furthermore,
 and the asserted transformation of \(\mathcal{B}_{S,\delta}\) follows.
 \end{proof}
 
-\begin{remark}[Auxiliary boundary families]\label{rem:boundary-families}
+\begin{remark}\label{rem:boundary-families}
 For finite boundary certificates it is also useful to consider
 \[
  W(x,\mu)=(1,x,x^2,x^3+\mu),\qquad Q(t,u)=(0,1,t,u).
@@ -510,7 +510,7 @@ certificates below, but their elementary count does not improve the
 uniform threshold in Proposition~\ref{prop:twisted-centers}.
 \end{remark}
 
-\begin{theorem}[Syndrome distance stratification]
+\begin{theorem}
 \label{thm:distance-stratification}
 Continue with the notation of Proposition~\ref{prop:explicit-product}, and
 let \(P\ne0\) be a syndrome point.  Write \(\mathcal L_2(P)\) for the
@@ -562,7 +562,7 @@ layers proves the displayed stratification.  Finally, the trisecant cover is com
 radius-three class, so only the first three layers remain.
 \end{proof}
 
-\begin{proposition}[Projective shells and deep-hole census]
+\begin{proposition}
 \label{prop:deep-census}
 Let \(C\) be an \([8,4]_q\) code and, for \(1\le t\le4\), let \(m_t(C)\)
 denote the number of projective syndrome points whose minimum expression as a
@@ -585,7 +585,7 @@ point belongs to the \(t\)-th shell.  Each projective point accounts for
 criterion.
 \end{proof}
 
-\begin{corollary}[Closed shell formula for the family]
+\begin{corollary}
 \label{cor:closed-shells}
 Let \(C=\RL_{4,\delta}(S)\), set \(r=r_S(\delta)\), and write
 \(h=m_4(C)\) for the number of uncovered projective syndrome points.  Then
@@ -612,7 +612,7 @@ Solving for \(m_3(C)\) gives the stated vector.  If \(\rho(C)=3\), then
 the number of deep-hole words.
 \end{proof}
 
-\begin{corollary}[Large-field covering-radius bound]\label{cor:large-q}
+\begin{corollary}\label{cor:large-q}
 Let \(C\) be any \([8,4]_q\) linear code.  If \(q\ge 56\), then
 \(\rho(C)=4\).  In particular, for every prime power \(q\ge 56\), every
 Roth--Lempel code \(\RL_{4,\delta}(S)\) with \(|S|=6\) has covering radius
@@ -633,7 +633,7 @@ code has redundancy \(4\), the redundancy bound gives \(\rho(C)\le 4\).
 Therefore \(\rho(C)=4\).
 \end{proof}
 
-\begin{proposition}[MDS and NMDS large-field refinements]\label{prop:large-q-refined}
+\begin{proposition}\label{prop:large-q-refined}
 Let \(C\) be an \([8,4]_q\) code.  If \(C\) is MDS and \(q\ge54\), then
 \(\rho(C)=4\).  If \(C\) is NMDS and \(q\ge53\), then
 \(\rho(C)=4\).
@@ -677,7 +677,7 @@ radius or certified radius \(4\) by an explicit uncovered syndrome point for
 specialization of the finite-geometric equivalence used for point
 configurations and arcs in projective spaces \cite{Ball2015}.
 
-\begin{theorem}[Complete small-field classification]\label{thm:complete}
+\begin{theorem}\label{thm:complete}
 For the Roth--Lempel codes \(\RL_{4,\delta}(S)\) with \(|S|=6\), the complete
 affine classifications over every prime-power field \(\F_q\) with
 \(7\le q\le53\) are summarized in Table~\ref{tab:complete-classification}.
@@ -746,7 +746,7 @@ representative.  Reproducibility files are listed in
 Section~\ref{sec:reproducibility}.
 \end{proof}
 
-\begin{theorem}[Complete covering-radius threshold]\label{thm:threshold}
+\begin{theorem}\label{thm:threshold}
 For every prime power \(q\ge16\), every Roth--Lempel code
 \(\RL_{4,\delta}(S)\) with \(|S|=6\) has covering radius \(4\).
 For \(7\le q<16\), the complete radius-three class counts are those in
@@ -771,7 +771,7 @@ reduction plus thirty explicit residual certificates, while the complete
 enumeration in Theorem~\ref{thm:complete} supplies an independent
 class-by-class computational verification.
 
-\begin{corollary}[Deep-hole criterion for all \(q\ge16\)]
+\begin{corollary}
 \label{cor:explicit-deepholes}
 Let \(q\ge16\), let \(C=\RL_{4,\delta}(S)\) with \(|S|=6\), and let \(u\)
 be a word with nonzero syndrome \(P=Hu^{\mathsf T}\), using the explicit
@@ -788,7 +788,7 @@ Proposition~\ref{prop:explicit-product} characterizes exactly those
 syndrome cosets whose distance is \(4\).
 \end{proof}
 
-\begin{corollary}[Certified deep-hole seed codes]\label{cor:seed-codes}
+\begin{corollary}\label{cor:seed-codes}
 For every prime power \(q\ge16\), the length-eight Roth--Lempel family
 \(\RL_{4,\delta}(S)\), \(|S|=6\), supplies explicit MDS or NMDS
 \([8,4]_q\) seed codes with maximal covering radius.  More precisely, for
@@ -1013,7 +1013,7 @@ radius-three classes.}
 These rows account for \(32\) affine classes; the full \(q=11\) affine list
 is given in Section~\ref{sec:q11-complete}.
 
-\begin{corollary}[The seven \(\F_{13}\) classes]\label{cor:q13-seven}
+\begin{corollary}\label{cor:q13-seven}
 Over \(\F_{13}\), exactly the seven affine classes in
 Table~\ref{tab:q13-seven-classes} have covering radius \(3\).
 \begin{center}
