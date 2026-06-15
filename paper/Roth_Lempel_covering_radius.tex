@@ -42,8 +42,8 @@ dimension-four Roth--Lempel codes.  They have the form
 First, \(C\) is always MDS or NMDS, and it is NMDS precisely when
 \(\delta\) is the sum of three distinct elements of \(S\).  Our main result
 is the sharp threshold \(q\ge16\Rightarrow \rho(C)=4\).
-For the remaining admissible fields, the radius-three codes are classified
-completely up to affine equivalence: their numbers are respectively
+For the prime-power fields below the threshold, the radius-three codes are
+classified completely up to affine equivalence: their numbers are respectively
 \(2,3,14,32,7\) over \(\F_7,\F_8,\F_9,\F_{11},\F_{13}\), and no other
 radius-three case exists.  The proof translates \(\rho(C)\le3\) into a
 finite-geometric covering condition: the \(56\) planes spanned by triples of
@@ -56,27 +56,28 @@ over \(q=16,17,19\) require explicit finite certificates.  We further give
 a \(56\)-factor polynomial whose
 nonvanishing characterizes all deep-hole syndromes when \(q\ge16\), an
 explicit distance stratification in every admissible field, and closed
-formulas for all projective syndrome shells, including
+relations among all projective syndrome shells, including the exact formula
 \(m_2(C)=28(q-1)-3r_S(\delta)\).
 \end{abstract}
 
 \section{Introduction}
 
 Covering radii and deep holes of linear codes are classical questions in
-coding theory \cite{Cohen1997,Huffman2003,MWS1977}.  For MDS and NMDS codes,
+coding theory~\cite{Cohen1997,Huffman2003,MWS1977}.  For MDS and NMDS codes,
 their syndrome geometry is naturally expressed by point configurations and
-arcs in finite projective spaces \cite{Ball2015,DodunekovLandgev1995}.
-Roth--Lempel codes are a classical source of non-Reed--Solomon MDS codes
-\cite{RothLempel1989}.
+arcs in finite projective spaces~\cite{Ball2015,DodunekovLandgev1995}.
+Roth--Lempel codes are a classical source of non-Reed--Solomon MDS
+codes~\cite{RothLempel1989}.
 
 The recent literature closest to the present problem has developed in two
 directions.  Han and Fan, and subsequently Xu and Zhou, investigate NMDS
-conditions and weight distributions for Roth--Lempel codes
-\cite{HanFan2023,XuZhou2026}; Liang and Liao construct further NMDS classes
-from the Roth--Lempel matrix \cite{LiangLiao2026}.  In parallel, covering
+criteria and weight distributions for Roth--Lempel
+codes~\cite{HanFan2023,XuZhou2026}; Liang and Liao construct further NMDS classes
+from the Roth--Lempel matrix~\cite{LiangLiao2026}.  In parallel, covering
 radii and deep holes have become structural tools for extended twisted-GRS
-and non-GRS MDS--NMDS constructions
-\cite{LiZhuSun2025,LiLuLingLam2026}.  Distinct from these works, this paper
+and non-GRS MDS--NMDS
+constructions~\cite{LiZhuSun2025,LiLuLingLam2026}.  Distinct from these works,
+this paper
 determines the complete covering-radius threshold and explicit deep-hole
 syndrome criterion for the fixed length-eight, dimension-four
 Roth--Lempel family.
@@ -90,7 +91,7 @@ syndromes.
 
 The main results are as follows.
 \begin{enumerate}
-\item Every \(\RL_{4,\delta}(S)\), \(|S|=6\), is MDS or NMDS.  Moreover,
+\item Every \(\RL_{4,\delta}(S)\), \(|S|=6\), is MDS or NMDS\@.  Moreover,
 it is NMDS if and only if
 \(\delta=a+b+c\) for three distinct elements \(a,b,c\in S\)
 (Proposition~\ref{prop:exhaustion}).
@@ -113,8 +114,9 @@ nonvanishing of one explicit product of \(56\) linear factors
 centers already proves existence for all \(q\ge23\), and for all NMDS codes
 when \(q\ge19\) (Proposition~\ref{prop:twisted-centers}).
 \item The complete syndrome distance stratification is explicit in every
-admissible field, and the projective shell sizes admit closed formulas.  In
-particular, the second shell is
+admissible field, and the projective shell sizes satisfy closed relations in
+terms of \(q\), \(r_S(\delta)\), and \(m_4(C)\).  In particular, the second
+shell is
 \[
  m_2(C)=28(q-1)-3r_S(\delta),
 \]
@@ -123,9 +125,9 @@ where \(r_S(\delta)\) counts the three-subsets of \(S\) with sum \(\delta\)
 Corollary~\ref{cor:closed-shells}).
 \end{enumerate}
 
-Thus the paper gives a complete structure theorem inside a classical
-non-GRS MDS/NMDS family.  The result also supplies an infinite collection of
-certified
+Thus the paper gives a complete structure theorem for the classical
+Roth--Lempel family of MDS and NMDS codes.  The result also supplies an infinite collection
+of certified
 \([8,4]_q\) Roth--Lempel seed codes with maximal covering radius and
 explicitly decidable deep-hole syndromes for deep-hole-based extension
 constructions; see Corollary~\ref{cor:seed-codes}.  The finite part of the
@@ -160,7 +162,7 @@ We focus on \(k=4\) and \(n=6\), so that the resulting code has parameters
 \([8,4]_q\).
 We use the standard convention that an \([N,K]_q\) code is NMDS when
 \(d(C)=N-K\) and \(d(C^\perp)=K\), following
-Dodunekov and Landgev \cite{DodunekovLandgev1995}.
+Dodunekov and Landgev~\cite{DodunekovLandgev1995}.
 
 The natural affine change of variables
 \[
@@ -175,7 +177,7 @@ All classifications below are taken modulo this affine action.
 \begin{proposition}\label{prop:exhaustion}
 For every prime power \(q\ge7\), every code
 \(\RL_{4,\delta}(S)\), with \(S\subseteq\F_q\) and \(|S|=6\), is either MDS
-or NMDS.  More precisely, it is NMDS if and only if
+or NMDS\@.  More precisely, it is NMDS if and only if
 \[
  \delta=a+b+c\quad\hbox{for some distinct }a,b,c\in S.
 \]
@@ -188,7 +190,7 @@ Write the last two generator columns as
 \(v(a)=(1,a,a^2,a^3)^{\mathsf T}\), \(a\in S\).  Every three columns are
 independent: this is the Vandermonde determinant for three evaluation
 columns, and with one or two of \(e,f\) it follows respectively from the
-rank-two first-coordinate projection of two distinct evaluation columns, or
+rank-two projection of two distinct evaluation columns onto the first two coordinates, or
 from the nonzero first coordinate of a single evaluation column together
 with the independence of \(e,f\).  Every
 five columns have rank four.  This is immediate if at least four evaluation
@@ -315,7 +317,7 @@ Let \(C\) be an \([8,4]_q\) linear code with parity-check columns
   \quad\Longleftrightarrow\quad
   \PG(3,q)=
   \bigcup_{1\le i<j<\ell\le 8}
-  \langle H_i,H_j,H_\ell\rangle .
+  \langle H_i,H_j,H_\ell\rangle.
 \]
 Since \(\rho(C)\le 4\) for every \([8,4]_q\) linear code, failure of this
 cover is equivalent to \(\rho(C)=4\).
@@ -328,8 +330,8 @@ syndrome has a representative of weight at most \(3\) precisely when it lies
 in the span of one, two, or three parity-check columns.  These smaller spans
 are contained in the spans of triples.  Hence every syndrome has a
 representative of weight at most \(3\) if and only if the \(56\) triple spans
-cover \(\PG(3,q)\).  The final assertion is the standard redundancy bound
-\cite{Cohen1997,Huffman2003}.
+cover \(\PG(3,q)\).  The final assertion is the standard redundancy
+bound~\cite{Cohen1997,Huffman2003}.
 \end{proof}
 
 \begin{proposition}\label{prop:projection}
@@ -357,9 +359,9 @@ projected arcs in the non-exceptional range.
 \begin{proposition}
 \label{prop:explicit-product}
 Let \(C=\RL_{4,\delta}(S)\), let
-\(\theta=\sum_{a\in S}a-\delta\), and write a projective syndrome relative
-to the parity-check matrix in Proposition~\ref{prop:duality} as
-\(P=(p_0,p_1,p_2,p_3)\).  Define
+\(\theta=\sum_{a\in S}a-\delta\), and choose homogeneous coordinates
+\(P=(p_0,p_1,p_2,p_3)\) for a projective syndrome relative to the
+parity-check matrix in Proposition~\ref{prop:duality}.  Define
 \[
 \begin{aligned}
 A_a(P)&=p_1-ap_0,\\
@@ -558,8 +560,8 @@ Thus \(\mathcal L_2(P)\) is equivalent to syndrome distance at most \(2\).
 Proposition~\ref{prop:explicit-product} says that
 \(\Phi_{S,\delta}(P)=0\) is equivalent to distance at most \(3\), while
 nonvanishing is equivalent to distance \(4\).  Subtracting successive
-layers proves the displayed stratification.  Finally, the trisecant cover is complete in a
-radius-three class, so only the first three layers remain.
+layers proves the displayed stratification.  Finally, the trisecant cover is
+complete in a radius-three class, so only the first three layers remain.
 \end{proof}
 
 \begin{proposition}
@@ -640,7 +642,7 @@ Let \(C\) be an \([8,4]_q\) code.  If \(C\) is MDS and \(q\ge54\), then
 \end{proposition}
 
 \begin{proof}
-Assume first that \(C\) is MDS.  Its \(56\) triple planes are distinct.  At
+Assume first that \(C\) is MDS\@.  Its \(56\) triple planes are distinct.  At
 each of the eight columns, \(21\) triple planes meet, contributing at least
 \(20\) repeated incidences.  Further, each of the \(28\) secant lines is
 contained in the six triple planes obtained by adjoining one of the remaining
@@ -671,11 +673,11 @@ For each prime power
 q\in\{7,8,9,11,13,16,17,19,23,25,27,29,31,32,37,41,43,47,49,53\}
 \]
 we enumerated all pairs \((S,\delta)\) with
-\(|S|=6\), reduced them under the affine action above, computed the covering
-radius or certified radius \(4\) by an explicit uncovered syndrome point for
-\(\RL_{4,\delta}(S)\).  This normalization is the natural affine
+\(|S|=6\), reduced them under the affine action above, and either computed
+the covering radius or certified radius \(4\) by an explicit uncovered
+syndrome point for \(\RL_{4,\delta}(S)\).  This normalization is the natural affine
 specialization of the finite-geometric equivalence used for point
-configurations and arcs in projective spaces \cite{Ball2015}.
+configurations and arcs in projective spaces~\cite{Ball2015}.
 
 \begin{theorem}\label{thm:complete}
 For the Roth--Lempel codes \(\RL_{4,\delta}(S)\) with \(|S|=6\), the complete
@@ -740,8 +742,8 @@ affine representative.  The additional scans for
 \(q=25,27,32,41,43,47,49,53\) first test one or two structured projective
 slices and record a point from a full-space fallback whenever both slices
 fail.  The extension-field scans use field-element canonical representatives,
-not integer encodings.  No class remains uncertified.  Proposition
-~\ref{prop:criterion} then gives \(\rho=4\) for every certified
+not integer encodings.  No class remains uncertified.
+Proposition~\ref{prop:criterion} then gives \(\rho=4\) for every certified
 representative.  Reproducibility files are listed in
 Section~\ref{sec:reproducibility}.
 \end{proof}
@@ -795,8 +797,8 @@ For every prime power \(q\ge16\), the length-eight Roth--Lempel family
 each seed the deep-hole syndrome cosets are exactly the nonzero syndromes
 \(P\) satisfying \(\Phi_{S,\delta}(P)\ne0\).  Therefore any
 deep-hole-based extension framework whose hypotheses require an explicit
-deep hole in such a seed, such as the framework in
-\cite{LiLuLingLam2026}, may choose \(P\) by this nonvanishing test.
+deep hole in such a seed, such as the framework
+in~\cite{LiLuLingLam2026}, may choose \(P\) by this nonvanishing test.
 \end{corollary}
 
 \begin{proof}
@@ -862,7 +864,7 @@ given in Table~\ref{tab:r-spectrum}.
 Thus \(r_S(\delta)=0\) distinguishes MDS from NMDS exactly, but neither
 the code type nor the number of dependent four-column sets determines the
 covering radius.  For instance, over \(\F_{11}\) both radius values occur
-when \(r_S(\delta)=0,2,\) or \(3\); over \(\F_{13}\), all radius-three
+when \(r_S(\delta)=0,2\), or \(3\); over \(\F_{13}\), all radius-three
 classes have \(r_S(\delta)\le1\).
 In contrast, Proposition~\ref{prop:second-shell} shows that this same
 additive statistic determines the entire second syndrome shell exactly.
@@ -967,7 +969,8 @@ two-slice scan below is the compact form reported in the article.
 A strengthened two-slice scan first searches \(P=[1,u,v,v]\), then
 \(P=[1,u,v,u]\), and invokes full-space search only if both slices fail.
 It handles both prime and non-prime fields.  As shown in
-Table~\ref{tab:two-slice-certificates}, the final column again vanishes.
+Table~\ref{tab:two-slice-certificates}, the final column vanishes in every
+field listed.
 \begin{center}
 \captionof{table}{Two-slice certificate search for prime and extension
 fields.}
@@ -1114,6 +1117,8 @@ idx&orb&type&\(\rho\)&\(S\)&\(\delta\)&holes\\
 \bottomrule
 \end{tabular}
 \end{center}
+Here ``idx'' and ``orb'' denote the class index and affine-orbit size,
+respectively.
 
 \noindent\textbf{Companion supplementary tables.}
 \begin{sloppypar}
@@ -1126,7 +1131,7 @@ repository.  For \(q=19,23,29,31,37\), each listed class includes an explicit
 first-hole certificate.  The full class-level results for \(q=7,8,9\) are
 contained in the exact small-prime-power log.  Exact certificate logs for
 the remaining certified fields are listed in Section~\ref{sec:reproducibility}
-and are available in the public repository above.
+and are available in the public repository cited there.
 \end{sloppypar}
 
 
@@ -1176,13 +1181,14 @@ Corollary~\ref{cor:closed-shells} further replaces the radius-three
 deep-hole census by a closed formula depending only on \(q\) and
 \(r_S(\delta)\).
 From the matroidal viewpoint on linear codes, where the Tutte polynomial
-records weight-enumerator information \cite{Greene1976}, the exact formula
+records weight-enumerator information~\cite{Greene1976}, the exact formula
 for \(m_2(C)\) suggests that these length-eight Roth--Lempel column matroids
 form a particularly rigid additive subfamily.
 
 For reference, Table~\ref{tab:boundary-certificate-families} gives the
 exact evaluation of the displayed certificate families on the three boundary
-fields and the first automatic field.
+fields and on \(q=23\), the first field covered uniformly by the
+twisted-cubic criterion.
 \begin{center}
 \captionof{table}{Boundary-field certificate counts for the displayed
 center families.}
@@ -1226,8 +1232,8 @@ direction for future work.
 
 \section{Reproducibility}\label{sec:reproducibility}
 
-All finite computations reported in this paper were performed in Magma
-\cite{Magma1997}, using exact finite-field arithmetic.  Parameter pairs are
+All finite computations reported in this paper were performed in
+Magma~\cite{Magma1997}, using exact finite-field arithmetic.  Parameter pairs are
 reduced under the affine action
 \[
  (S,\delta)\longmapsto (uS+v,u\delta+3v),
@@ -1247,7 +1253,7 @@ Proposition~\ref{prop:twisted-centers} resolves every representative except
 settled by explicit centers from the families \(W(x,\mu)\) and \(Q(t,u)\)
 in Remark~\ref{rem:boundary-families}; the certificates themselves are
 listed in the companion supplement
-\href{run:Roth_Lempel_boundary_certificates_supplement.tex}
+\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/certificates/Roth_Lempel_boundary_certificates_supplement.tex}
 {\path{Roth_Lempel_boundary_certificates_supplement.tex}}.
 For every \(q\geq 23\), Theorem~\ref{thm:threshold} is theoretical and does
 not depend on an exhaustive machine scan.  The complete-classification scans
@@ -1293,7 +1299,7 @@ Additional exact scans consistent with the theorem; not proof inputs.\\
 \end{center}
 
 The accompanying program-and-log manifest,
-\href{run:Roth_Lempel_reproducibility_manifest_20260615.md}
+\href{https://github.com/matheorist/roth-lempel-covering-radius/blob/main/paper/Roth_Lempel_reproducibility_manifest_20260615.md}
 {\path{Roth_Lempel_reproducibility_manifest_20260615.md}}, records the
 Magma files, exact output logs, extracted tables, and the logical role of
 each computation.  This keeps the article-level argument separate from
@@ -1358,7 +1364,7 @@ doi:10.1109/TIT.2025.3541799.
 \bibitem{LiangLiao2026}
 Z. Liang, Q. Liao,
 ``Two classes of NMDS codes from Roth--Lempel codes,''
-\emph{Finite Fields Appl.}, vol. 111, Art. no. 102779, 2026,
+\emph{Finite Fields Appl.}, vol. 111, Art.\ no. 102779, 2026,
 doi:10.1016/j.ffa.2025.102779.
 
 \bibitem{Magma1997}
